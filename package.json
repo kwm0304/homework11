@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "uuidv4": "^6.2.13"
+  },
+  "scripts": {
+    "start": "npm start"
+  },
+  "name": "homework11",
+  "description": "",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kwm0304/homework11.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kwm0304/homework11/issues"
+  },
+  "homepage": "https://github.com/kwm0304/homework11#readme"
+}
