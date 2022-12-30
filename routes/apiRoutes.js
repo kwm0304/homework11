@@ -20,5 +20,5 @@ router.delete('/notes/:id', (req, res) => {
     deleteNote(targetNote, notes);
     res.redirect('');
 });
-
+//why is nothing staged to commit
 module.exports = router;
