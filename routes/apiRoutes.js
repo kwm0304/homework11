@@ -2,18 +2,23 @@ const router = require('express').Router();
 const data = require('../db/db.json');
 const { deleteNote, createNewNote } = require('../db/helper')
 const { v4: uuidv4 } = require('uuid');
+const fs = require('fs')
 
-router.get('/notes', (req, res) => {
-    let data = notes;
-    res.send(data);
+router.get("/notes", function(req, res) {
+    fs.readFile(__dirname + "/../db/db.json", (err, data) => {
+        if (err) throw err
+        let data = JSON.parse(data);
+        return res.json(data);
+
+    })
 });
-router.get('/', (req, res) => {
-    res.send('API HERE!');
-});
+
+
 router.post('/notes', (req, res) => {
     req.body.id = uuidv4
-    const newNote = createNewNote(req.body, notes)
-    res.json(newNote);
+    data.push(req.body);
+    fs.writeFile("./db/db.json", JSON.stringify(data), function () {
+    res.json(data);
 });
 router.delete('/notes/:id', (req, res) => {
     const targetNote = req.params.id 

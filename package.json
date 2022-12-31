@@ -5,7 +5,7 @@
     "uuidv4": "^6.2.13"
   },
   "scripts": {
-    "start": "npm start"
+    "start": "node server.js"
   },
   "name": "homework11again",
   "description": "",
